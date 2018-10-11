@@ -62,7 +62,9 @@ class mysqlInfo:
         for key, values in whereMap.items():
             where = where+" and "+key+"='"+values+"' "
         resList=''
-        for item in useArr:
+        resList = ','.join(useArr)  # 简单拼接的方法
+        newArr = resList.split(',') # 用**分割字符串
+        for item in newArr:
             if resList=='':
                 resList=item
             else:
