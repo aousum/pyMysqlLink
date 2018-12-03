@@ -1,0 +1,4 @@
+set FLASKR_SETTINGS=F:\wordspace\myWeb\myWeb\setting.py
+from myWeb import db
+from myWeb.model import User,Category
+db.create_all()
